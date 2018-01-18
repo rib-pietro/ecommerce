@@ -8,7 +8,13 @@ $app->config('debug', true);
 
 $app->get('/', function() {
     
-	echo "OK";
+	$sql = new Hcode\DB\Sql(); //invoca a classe Sql pertencente ao namespace DB, o que é reconhecido com o uso da contra barra ('\')
+
+	var_dump($sql);
+
+	$results = $sql->select("SELECT * FROM tb_users");
+
+	echo json_encode($results);
 
 });
 
