@@ -95,7 +95,7 @@ $app->get("/admin/users/:iduser", function($iduser){
 
 	$page = new PageAdmin();
 
-	$page->setTpl("users-update", $value);
+	$page->setTpl("users-update");
 
 });
 
